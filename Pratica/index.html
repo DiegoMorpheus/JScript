@@ -13,75 +13,54 @@
   <body>
     <div class="container">
       <h1 class="mb-4">Alunos (API)</h1>
-      <form id="produtoForm" class="form-inline mb-4">
-        <input
-          type="number"
-          id="id"
-          placeholder="ID"
-          class="form-control"
-          required
-        />
-        <input
-          type="text"
-          id="nome"
-          placeholder="Nome"
-          class="form-control"
-          required
-        />
-        
-        <button type="submit" class="btn btn-success">Adicionar</button>
+      
+      <!-- Formulário para adicionar aluno -->
+      <form id="adicionarForm" class="form-inline mb-4">
+        <input type="text" id="nome" placeholder="Nome" class="form-control" required />
+        <input type="text" id="turma" placeholder="Turma" class="form-control" required />
+        <input type="text" id="curso" placeholder="Curso" class="form-control" required />
+        <input type="text" id="matricula" placeholder="Matrícula" class="form-control" required />
+        <button type="submit" class="btn btn-success">Adicionar Aluno</button>
       </form>
-    
-     
-      <form>
+
+      <!-- Tabela de exibição dos alunos -->
       <table class="table table-bordered table-striped">
         <thead class="table-dark">
           <tr>
             <th>ID</th>
             <th>Nome</th>
-           </tr>
+            <th>Turma</th>
+            <th>Curso</th>
+            <th>Matrícula</th>
+          </tr>
         </thead>
-        <tbody id="produtosBody"></tbody> 
-        <button type="submit" class="btn btn-success">Listagem de Dados</button>
+        <tbody id="produtosBody"></tbody>
       </table>
+      
+      <div class="container">
+         <button id="exibirDados" class="btn btn-primary mb-4">Exibir Alunos</button>
+      </div>
+
+
+
+      <!-- Formulário para alteração de dados -->
+      <form id="alterarForm" class="form-inline mb-4">
+        <input type="number" id="idAlterar" placeholder="ID" class="form-control" required />
+        <input type="text" id="nomeAlterar" placeholder="Novo Nome" class="form-control" />
+        <input type="text" id="turmaAlterar" placeholder="Nova Turma" class="form-control" />
+        <input type="text" id="cursoAlterar" placeholder="Novo Curso" class="form-control" />
+        <input type="text" id="matriculaAlterar" placeholder="Nova Matrícula" class="form-control" />
+        <button type="submit" class="btn btn-warning">Alterar Dados</button>
       </form>
-           <form id="produtoForm" class="form-inline mb-4">
-        <input
-          type="number"
-          id="id"
-          placeholder="ID"
-          class="form-control"
-          required
-        />
-        <input
-          type="text"
-          id="nome"
-          placeholder="Nome"
-          class="form-control"
-          required
-        />
-        
-        <button type="submit" class="btn btn-success">Alterar dados</button>
-      </form>
-             <form id="produtoForm" class="form-inline mb-4">
-        <input
-          type="number"
-          id="id"
-          placeholder="ID"
-          class="form-control"
-          required
-        />
-        <input
-          type="text"
-          id="nome"
-          placeholder="Nome"
-          class="form-control"
-          required
-        />
-        
-        <button type="submit" class="btn btn-success">Excluir dados</button>
+
+      <!-- Formulário para exclusão de aluno -->
+      <form id="excluirForm" class="form-inline mb-4">
+        <input type="number" id="idExcluir" placeholder="ID" class="form-control" required />
+        <button type="submit" class="btn btn-danger">Excluir Aluno</button>
       </form>
     </div>
-    <script src="js/produtos.js"></script>
 
+    <!-- Script JavaScript -->
+    <script src="js/alunos.js"></script>
+  </body>
 </html>
